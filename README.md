@@ -18,7 +18,7 @@ docker volume create <name of volume>
 # run container with volume
 docker run --name <name of container> -e POSTGRES_PASSWORD=<password here> -d -p 5432:5432 -v <name of volume>:/var/lib/postgresql/data <name of DB>
 
-# create docker-compose to set up container with postgres
+# create docker-compose to set up container with postgres (will inherit root project dir name as root container name and underscore append newer names
     version: '3.8' -> docker-compose version
     services: -> defines containers in app
       db: -> service named db for app
